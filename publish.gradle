@@ -1,0 +1,30 @@
+apply plugin: 'maven-publish'
+
+android {
+    publishing {
+        singleVariant('release') {
+            withSourcesJar()
+        }
+    }
+}
+
+
+publishing {
+    publications {
+        release(MavenPublication) {
+            groupId = "${android.namespace}"
+            artifactId = "${project.name}"
+            version = '1.0'
+
+            afterEvaluate {
+                from components.release
+            }
+        }
+    }
+    repositories {
+        maven {
+            name = 'myrepo'
+            url = "${project.buildDir}/repo"
+        }
+    }
+}

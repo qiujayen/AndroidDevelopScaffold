@@ -1,0 +1,21 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "AndroidDevelopScaffold"
+//include ':ads'
+//include ':ads-view'
+//include ':ads-compose'
+include ':recyclerview-adapter-binding'
+include ':recyclerview-adapter-common'
+include ':recyclerview-diff'
