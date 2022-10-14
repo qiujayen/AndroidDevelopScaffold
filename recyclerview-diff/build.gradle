@@ -3,6 +3,8 @@ plugins {
     id 'maven-publish'
 }
 
+group = 'cn.ads.recyclerview'
+
 android {
     namespace 'cn.ads.recyclerview'
     compileSdk 33
